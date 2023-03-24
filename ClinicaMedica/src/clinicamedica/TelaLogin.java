@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 
 public class TelaLogin extends javax.swing.JPanel {
-    private Usuario usuario;
+    private Clinica clinica;
     
     public TelaLogin() {
         initComponents();
@@ -25,14 +25,14 @@ public class TelaLogin extends javax.swing.JPanel {
             FileInputStream arquivo = new FileInputStream(serial);
             ObjectInputStream in = new ObjectInputStream(arquivo);
             
-            this.usuario = (Usuario) in.readObject();
+            this.clinica = (Clinica) in.readObject();
             in.close();
             arquivo.close();
             
             System.out.println("Desserializacao realizada.");
         } catch (IOException | ClassNotFoundException e) {
             System.err.println("Arquivo serial nao encontrado.");
-            usuario = new Usuario();
+            clinica = new Clinica();
         }
     }
     
@@ -49,14 +49,15 @@ public class TelaLogin extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         txt_criarConta = new javax.swing.JLabel();
         img_logo = new extras.PicturePanel();
+        jLabel3 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 102, 102));
 
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
-        jLabel1.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Comic Sans MS", 0, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Faça seu login");
+        jLabel1.setText("Bem Vindo!");
 
         btn_entrar.setBackground(new java.awt.Color(153, 255, 51));
         btn_entrar.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
@@ -65,11 +66,6 @@ public class TelaLogin extends javax.swing.JPanel {
         btn_entrar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btn_entrarMouseClicked(evt);
-            }
-        });
-        btn_entrar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_entrarActionPerformed(evt);
             }
         });
 
@@ -120,12 +116,16 @@ public class TelaLogin extends javax.swing.JPanel {
         img_logo.setLayout(img_logoLayout);
         img_logoLayout.setHorizontalGroup(
             img_logoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 333, Short.MAX_VALUE)
+            .addGap(0, 323, Short.MAX_VALUE)
         );
         img_logoLayout.setVerticalGroup(
             img_logoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 158, Short.MAX_VALUE)
+            .addGap(0, 148, Short.MAX_VALUE)
         );
+
+        jLabel3.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Faça seu login...");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -134,7 +134,7 @@ public class TelaLogin extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(36, 36, 36)
                 .addComponent(img_logo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(28, 28, 28)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -145,21 +145,25 @@ public class TelaLogin extends javax.swing.JPanel {
                             .addComponent(txt_user, javax.swing.GroupLayout.DEFAULT_SIZE, 290, Short.MAX_VALUE))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(140, 140, 140)
-                        .addComponent(jLabel1)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(56, 56, 56)
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txt_criarConta)
-                        .addContainerGap(63, Short.MAX_VALUE))))
+                        .addContainerGap(63, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(44, 44, 44)
+                        .addComponent(jLabel1)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel3)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel1))
                 .addGap(18, 18, 18)
                 .addComponent(txt_user, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -212,12 +216,12 @@ public class TelaLogin extends javax.swing.JPanel {
     }//GEN-LAST:event_btn_entrarMouseClicked
 
     private void txt_criarContaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_criarContaMouseClicked
-        // TODO add your handling code here:
+        Janela.tc = new TelaCadastro();
+        JFrame janela = (JFrame)SwingUtilities.getWindowAncestor(this);
+        janela.getContentPane().removeAll();
+        janela.add(Janela.tc);
+        janela.pack();
     }//GEN-LAST:event_txt_criarContaMouseClicked
-
-    private void btn_entrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_entrarActionPerformed
-        AudioWav erro =  new AudioWav("src\\arquivos\\erro.wav");
-    }//GEN-LAST:event_btn_entrarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -225,6 +229,7 @@ public class TelaLogin extends javax.swing.JPanel {
     private extras.PicturePanel img_logo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSpinner jSpinner1;
     private javax.swing.JLabel txt_criarConta;

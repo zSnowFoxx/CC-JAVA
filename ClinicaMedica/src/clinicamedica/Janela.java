@@ -12,7 +12,11 @@ import java.awt.BorderLayout;
  */
 public class Janela extends javax.swing.JFrame {
 
+    public static TelaAgendar ta;
+    public static TelaCadastro tc;
     public static TelaLogin tl;
+    public static TelaMedicos tm;
+    public static TelaRelatorio tr;
     
     public Janela() {
         initComponents();

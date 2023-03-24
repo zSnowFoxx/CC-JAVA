@@ -8,6 +8,6 @@ package clinicamedica;
  *
  * @author Administrador
  */
-public class Medico extends Usuario {
+public class Paciente extends Usuario {
     
 }
