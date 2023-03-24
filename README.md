@@ -1,4 +1,4 @@
-### Gerenclinic - Sistema de Gerenciamento de Consultas
+# Gerenclinic - Sistema de Gerenciamento de Consultas
 
 O Gerenclinic é um sistema desenvolvido para facilitar o agendamento de consultas em uma clínica médica. Com ele, secretárias podem agendar consultas com médicos de diversas especialidades, visualizar histórico de consultas anteriores e enviar lembretes sobre consultas agendadas.
 
@@ -8,7 +8,7 @@ Para utilizar o Sistema de Gerenciamento de Consultas, basta fazer o download do
 
     Windows 10
     
-# Compatibilidade:
+### Compatibilidade:
 
 O Sistema de Gerenciamento de Consultas foi desenvolvido em Java 11 e é compatível com todas as versões dessa plataforma. Certifique-se de ter o Java instalado em sua máquina antes de executar o sistema.
 
@@ -26,7 +26,7 @@ O Sistema de Gerenciamento de Consultas oferece as seguintes funcionalidades:
 O Sistema de Gerenciamento de Consultas não requer configurações adicionais para ser executado. 
 
 
-# Contribuindo no projeto:
+### Contribuindo no projeto:
 
 Para contribuir no projeto do Sistema de Gerenciamento de Consultas, siga os seguintes passos:
 
