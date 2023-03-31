@@ -4,6 +4,8 @@
  */
 package clinicamedica;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author Administrador
@@ -15,6 +17,9 @@ public class TelaCadastro extends javax.swing.JPanel {
      */
     public TelaCadastro() {
         initComponents();
+        img_logo.setOpaque(false);
+        img_logo2.setOpaque(false);
+        pn_medico.setVisible(false);
     }
 
     /**
@@ -26,19 +31,925 @@ public class TelaCadastro extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btg_sexo = new javax.swing.ButtonGroup();
+        btg_tipo = new javax.swing.ButtonGroup();
+        img_logo = new extras.PicturePanel();
+        txt_user = new javax.swing.JTextField();
+        txt_senha = new javax.swing.JTextField();
+        txt_nome = new javax.swing.JTextField();
+        jSeparator1 = new javax.swing.JSeparator();
+        jLabel1 = new javax.swing.JLabel();
+        txt_email = new javax.swing.JTextField();
+        txt_cpf = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        txt_dia = new javax.swing.JTextField();
+        txt_mes = new javax.swing.JTextField();
+        txt_ano = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        rd_masc = new javax.swing.JRadioButton();
+        rd_fem = new javax.swing.JRadioButton();
+        rd_outro = new javax.swing.JRadioButton();
+        jLabel5 = new javax.swing.JLabel();
+        rd_paciente = new javax.swing.JRadioButton();
+        rd_medico = new javax.swing.JRadioButton();
+        rd_adm = new javax.swing.JRadioButton();
+        btn_entrar = new javax.swing.JButton();
+        btn_entrar1 = new javax.swing.JButton();
+        btn_entrar2 = new javax.swing.JButton();
+        img_logo2 = new extras.PicturePanel();
+        pn_medico = new javax.swing.JPanel();
+        txt_crm = new javax.swing.JTextField();
+        cb_especialidade = new javax.swing.JComboBox<>();
+        jLabel6 = new javax.swing.JLabel();
+        btn_0800 = new javax.swing.JButton();
+        btn_0830 = new javax.swing.JButton();
+        btn_0900 = new javax.swing.JButton();
+        btn_0930 = new javax.swing.JButton();
+        btn_1000 = new javax.swing.JButton();
+        btn_1030 = new javax.swing.JButton();
+        btn_1100 = new javax.swing.JButton();
+        btn_1130 = new javax.swing.JButton();
+        btn_1400 = new javax.swing.JButton();
+        btn_1430 = new javax.swing.JButton();
+        btn_1500 = new javax.swing.JButton();
+        btn_1530 = new javax.swing.JButton();
+        btn_1600 = new javax.swing.JButton();
+        btn_1630 = new javax.swing.JButton();
+        btn_1700 = new javax.swing.JButton();
+        btn_1730 = new javax.swing.JButton();
+
+        setBackground(new java.awt.Color(0, 102, 102));
+
+        img_logo.setImg(new ImageIcon("src\\arquivos\\logo-top-medic.png"));
+
+        javax.swing.GroupLayout img_logoLayout = new javax.swing.GroupLayout(img_logo);
+        img_logo.setLayout(img_logoLayout);
+        img_logoLayout.setHorizontalGroup(
+            img_logoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 92, Short.MAX_VALUE)
+        );
+        img_logoLayout.setVerticalGroup(
+            img_logoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 44, Short.MAX_VALUE)
+        );
+
+        txt_user.setBackground(new java.awt.Color(255, 255, 255));
+        txt_user.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        txt_user.setForeground(new java.awt.Color(102, 102, 102));
+        txt_user.setText("Digite seu usuário...");
+        txt_user.setToolTipText("");
+        txt_user.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                txt_userFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txt_userFocusLost(evt);
+            }
+        });
+
+        txt_senha.setBackground(new java.awt.Color(255, 255, 255));
+        txt_senha.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        txt_senha.setForeground(new java.awt.Color(102, 102, 102));
+        txt_senha.setText("Digite sua senha...");
+        txt_senha.setToolTipText("");
+        txt_senha.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                txt_senhaFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txt_senhaFocusLost(evt);
+            }
+        });
+
+        txt_nome.setBackground(new java.awt.Color(255, 255, 255));
+        txt_nome.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        txt_nome.setForeground(new java.awt.Color(102, 102, 102));
+        txt_nome.setText("Digite seu nome...");
+        txt_nome.setToolTipText("");
+        txt_nome.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                txt_nomeFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txt_nomeFocusLost(evt);
+            }
+        });
+
+        jLabel1.setFont(new java.awt.Font("Comic Sans MS", 0, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Cadastro");
+
+        txt_email.setBackground(new java.awt.Color(255, 255, 255));
+        txt_email.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        txt_email.setForeground(new java.awt.Color(102, 102, 102));
+        txt_email.setText("Digite seu endereço de email...");
+        txt_email.setToolTipText("");
+        txt_email.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                txt_emailFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txt_emailFocusLost(evt);
+            }
+        });
+
+        txt_cpf.setBackground(new java.awt.Color(255, 255, 255));
+        txt_cpf.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        txt_cpf.setForeground(new java.awt.Color(102, 102, 102));
+        txt_cpf.setText("Digite seu CPF...");
+        txt_cpf.setToolTipText("");
+        txt_cpf.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                txt_cpfFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txt_cpfFocusLost(evt);
+            }
+        });
+
+        jLabel3.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Informe sua data de nascimento:");
+
+        txt_dia.setBackground(new java.awt.Color(255, 255, 255));
+        txt_dia.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        txt_dia.setForeground(new java.awt.Color(102, 102, 102));
+        txt_dia.setText("DD");
+        txt_dia.setToolTipText("");
+        txt_dia.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                txt_diaFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txt_diaFocusLost(evt);
+            }
+        });
+
+        txt_mes.setBackground(new java.awt.Color(255, 255, 255));
+        txt_mes.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        txt_mes.setForeground(new java.awt.Color(102, 102, 102));
+        txt_mes.setText("MM");
+        txt_mes.setToolTipText("");
+        txt_mes.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                txt_mesFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txt_mesFocusLost(evt);
+            }
+        });
+
+        txt_ano.setBackground(new java.awt.Color(255, 255, 255));
+        txt_ano.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        txt_ano.setForeground(new java.awt.Color(102, 102, 102));
+        txt_ano.setText("YYYY");
+        txt_ano.setToolTipText("");
+        txt_ano.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                txt_anoFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txt_anoFocusLost(evt);
+            }
+        });
+
+        jLabel4.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Informe seu sexo:");
+
+        btg_sexo.add(rd_masc);
+        rd_masc.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        rd_masc.setForeground(new java.awt.Color(255, 255, 255));
+        rd_masc.setText("Masculino");
+
+        btg_sexo.add(rd_fem);
+        rd_fem.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        rd_fem.setForeground(new java.awt.Color(255, 255, 255));
+        rd_fem.setText("Feminino");
+
+        btg_sexo.add(rd_outro);
+        rd_outro.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        rd_outro.setForeground(new java.awt.Color(255, 255, 255));
+        rd_outro.setText("Outro");
+        rd_outro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rd_outroActionPerformed(evt);
+            }
+        });
+
+        jLabel5.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Informe o tipo:");
+
+        btg_tipo.add(rd_paciente);
+        rd_paciente.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        rd_paciente.setForeground(new java.awt.Color(255, 255, 255));
+        rd_paciente.setText("Paciente");
+        rd_paciente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rd_pacienteActionPerformed(evt);
+            }
+        });
+
+        btg_tipo.add(rd_medico);
+        rd_medico.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        rd_medico.setForeground(new java.awt.Color(255, 255, 255));
+        rd_medico.setText("Medico");
+
+        btg_tipo.add(rd_adm);
+        rd_adm.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        rd_adm.setForeground(new java.awt.Color(255, 255, 255));
+        rd_adm.setText("Administrador");
+
+        btn_entrar.setBackground(new java.awt.Color(153, 255, 51));
+        btn_entrar.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        btn_entrar.setForeground(new java.awt.Color(0, 0, 0));
+        btn_entrar.setText("Cadastrar");
+        btn_entrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_entrarMouseClicked(evt);
+            }
+        });
+
+        btn_entrar1.setBackground(new java.awt.Color(204, 204, 204));
+        btn_entrar1.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        btn_entrar1.setForeground(new java.awt.Color(0, 0, 0));
+        btn_entrar1.setText("Voltar");
+        btn_entrar1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_entrar1MouseClicked(evt);
+            }
+        });
+
+        btn_entrar2.setBackground(new java.awt.Color(204, 204, 204));
+        btn_entrar2.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        btn_entrar2.setForeground(new java.awt.Color(0, 0, 0));
+        btn_entrar2.setText("Limpar Campos");
+        btn_entrar2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_entrar2MouseClicked(evt);
+            }
+        });
+
+        img_logo2.setImg(new ImageIcon("src\\arquivos\\logo-top-medic.png"));
+
+        javax.swing.GroupLayout img_logo2Layout = new javax.swing.GroupLayout(img_logo2);
+        img_logo2.setLayout(img_logo2Layout);
+        img_logo2Layout.setHorizontalGroup(
+            img_logo2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 92, Short.MAX_VALUE)
+        );
+        img_logo2Layout.setVerticalGroup(
+            img_logo2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 44, Short.MAX_VALUE)
+        );
+
+        pn_medico.setBackground(new java.awt.Color(0, 102, 102));
+
+        txt_crm.setBackground(new java.awt.Color(255, 255, 255));
+        txt_crm.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        txt_crm.setForeground(new java.awt.Color(102, 102, 102));
+        txt_crm.setText("Informe seu CRM...");
+        txt_crm.setToolTipText("");
+        txt_crm.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                txt_crmFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txt_crmFocusLost(evt);
+            }
+        });
+
+        cb_especialidade.setBackground(new java.awt.Color(204, 204, 204));
+        cb_especialidade.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        cb_especialidade.setForeground(new java.awt.Color(51, 51, 51));
+        cb_especialidade.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Especialidade", "Clinico Geral", "Pediatra", "Dentista", "Ginecologista", "Geriatra", "Psicologo", "Psiquiatra", "Dermatologista", "Urologista", "Oftalmologista", "Otorrinolaringologista", "Veterinario" }));
+
+        jLabel6.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Horários Disponíveis (Segunda a Sexta):");
+
+        btn_0800.setBackground(new java.awt.Color(204, 204, 204));
+        btn_0800.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        btn_0800.setForeground(new java.awt.Color(0, 0, 0));
+        btn_0800.setText("08:00");
+        btn_0800.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_0800MouseClicked(evt);
+            }
+        });
+
+        btn_0830.setBackground(new java.awt.Color(204, 204, 204));
+        btn_0830.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        btn_0830.setForeground(new java.awt.Color(0, 0, 0));
+        btn_0830.setText("08:30");
+        btn_0830.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_0830MouseClicked(evt);
+            }
+        });
+
+        btn_0900.setBackground(new java.awt.Color(204, 204, 204));
+        btn_0900.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        btn_0900.setForeground(new java.awt.Color(0, 0, 0));
+        btn_0900.setText("09:00");
+        btn_0900.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_0900MouseClicked(evt);
+            }
+        });
+
+        btn_0930.setBackground(new java.awt.Color(204, 204, 204));
+        btn_0930.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        btn_0930.setForeground(new java.awt.Color(0, 0, 0));
+        btn_0930.setText("09:30");
+        btn_0930.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_0930MouseClicked(evt);
+            }
+        });
+
+        btn_1000.setBackground(new java.awt.Color(204, 204, 204));
+        btn_1000.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        btn_1000.setForeground(new java.awt.Color(0, 0, 0));
+        btn_1000.setText("10:00");
+        btn_1000.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_1000MouseClicked(evt);
+            }
+        });
+
+        btn_1030.setBackground(new java.awt.Color(204, 204, 204));
+        btn_1030.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        btn_1030.setForeground(new java.awt.Color(0, 0, 0));
+        btn_1030.setText("10:30");
+        btn_1030.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_1030MouseClicked(evt);
+            }
+        });
+
+        btn_1100.setBackground(new java.awt.Color(204, 204, 204));
+        btn_1100.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        btn_1100.setForeground(new java.awt.Color(0, 0, 0));
+        btn_1100.setText("11:00");
+        btn_1100.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_1100MouseClicked(evt);
+            }
+        });
+
+        btn_1130.setBackground(new java.awt.Color(204, 204, 204));
+        btn_1130.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        btn_1130.setForeground(new java.awt.Color(0, 0, 0));
+        btn_1130.setText("11:30");
+        btn_1130.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_1130MouseClicked(evt);
+            }
+        });
+
+        btn_1400.setBackground(new java.awt.Color(204, 204, 204));
+        btn_1400.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        btn_1400.setForeground(new java.awt.Color(0, 0, 0));
+        btn_1400.setText("14:00");
+        btn_1400.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_1400MouseClicked(evt);
+            }
+        });
+
+        btn_1430.setBackground(new java.awt.Color(204, 204, 204));
+        btn_1430.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        btn_1430.setForeground(new java.awt.Color(0, 0, 0));
+        btn_1430.setText("14:30");
+        btn_1430.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_1430MouseClicked(evt);
+            }
+        });
+
+        btn_1500.setBackground(new java.awt.Color(204, 204, 204));
+        btn_1500.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        btn_1500.setForeground(new java.awt.Color(0, 0, 0));
+        btn_1500.setText("15:00");
+        btn_1500.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_1500MouseClicked(evt);
+            }
+        });
+
+        btn_1530.setBackground(new java.awt.Color(204, 204, 204));
+        btn_1530.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        btn_1530.setForeground(new java.awt.Color(0, 0, 0));
+        btn_1530.setText("15:30");
+        btn_1530.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_1530MouseClicked(evt);
+            }
+        });
+
+        btn_1600.setBackground(new java.awt.Color(204, 204, 204));
+        btn_1600.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        btn_1600.setForeground(new java.awt.Color(0, 0, 0));
+        btn_1600.setText("16:00");
+        btn_1600.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_1600MouseClicked(evt);
+            }
+        });
+
+        btn_1630.setBackground(new java.awt.Color(204, 204, 204));
+        btn_1630.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        btn_1630.setForeground(new java.awt.Color(0, 0, 0));
+        btn_1630.setText("16:30");
+        btn_1630.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_1630MouseClicked(evt);
+            }
+        });
+
+        btn_1700.setBackground(new java.awt.Color(204, 204, 204));
+        btn_1700.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        btn_1700.setForeground(new java.awt.Color(0, 0, 0));
+        btn_1700.setText("17:00");
+        btn_1700.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_1700MouseClicked(evt);
+            }
+        });
+
+        btn_1730.setBackground(new java.awt.Color(204, 204, 204));
+        btn_1730.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        btn_1730.setForeground(new java.awt.Color(0, 0, 0));
+        btn_1730.setText("17:30");
+        btn_1730.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_1730MouseClicked(evt);
+            }
+        });
+        btn_1730.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_1730ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pn_medicoLayout = new javax.swing.GroupLayout(pn_medico);
+        pn_medico.setLayout(pn_medicoLayout);
+        pn_medicoLayout.setHorizontalGroup(
+            pn_medicoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pn_medicoLayout.createSequentialGroup()
+                .addComponent(txt_crm, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cb_especialidade, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pn_medicoLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel6)
+                .addGap(218, 218, 218))
+            .addGroup(pn_medicoLayout.createSequentialGroup()
+                .addGap(46, 46, 46)
+                .addGroup(pn_medicoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pn_medicoLayout.createSequentialGroup()
+                        .addComponent(btn_0800)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btn_0830)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btn_0900)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btn_0930)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btn_1000)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btn_1030)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btn_1100)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btn_1130))
+                    .addGroup(pn_medicoLayout.createSequentialGroup()
+                        .addComponent(btn_1400)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btn_1430)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btn_1500)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btn_1530)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btn_1600)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btn_1630)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btn_1700)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btn_1730)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        pn_medicoLayout.setVerticalGroup(
+            pn_medicoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pn_medicoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pn_medicoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txt_crm, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
+                    .addComponent(cb_especialidade))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pn_medicoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_0800)
+                    .addComponent(btn_0830)
+                    .addComponent(btn_0900)
+                    .addComponent(btn_0930)
+                    .addComponent(btn_1000)
+                    .addComponent(btn_1030)
+                    .addComponent(btn_1100)
+                    .addComponent(btn_1130))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pn_medicoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_1400)
+                    .addComponent(btn_1430)
+                    .addComponent(btn_1500)
+                    .addComponent(btn_1530)
+                    .addComponent(btn_1600)
+                    .addComponent(btn_1630)
+                    .addComponent(btn_1700)
+                    .addComponent(btn_1730))
+                .addContainerGap(17, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(txt_dia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txt_mes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txt_ano, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(jLabel3)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(36, 36, 36)
+                                .addComponent(rd_masc)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rd_fem)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rd_outro))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(82, 82, 82)
+                                .addComponent(jLabel4)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(21, 21, 21)
+                                .addComponent(rd_adm))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(rd_medico)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(rd_paciente))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(jLabel5)
+                                .addGap(20, 20, 20)))
+                        .addGap(70, 70, 70))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txt_nome, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addComponent(txt_email, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txt_cpf, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addComponent(img_logo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(226, 226, 226)
+                                .addComponent(jLabel1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(img_logo2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addComponent(txt_user, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txt_senha, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGap(1, 1, 1)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(pn_medico, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(btn_entrar1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(btn_entrar, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(btn_entrar2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                        .addContainerGap(36, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addComponent(jLabel1))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(img_logo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(img_logo2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(18, 18, 18)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(txt_nome, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_user, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_senha, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_email, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_cpf, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel5)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(rd_paciente)
+                            .addComponent(rd_medico))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(rd_adm))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(jLabel4)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(rd_masc)
+                                .addComponent(rd_fem)
+                                .addComponent(rd_outro)))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(jLabel3)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(txt_dia, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt_mes, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt_ano, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(pn_medico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_entrar, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_entrar1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_entrar2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(28, 28, 28))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void txt_userFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_userFocusGained
+        if(txt_user.getText().equals("Digite seu nome...")){
+            txt_user.setText("");
+        }
+    }//GEN-LAST:event_txt_userFocusGained
+
+    private void txt_userFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_userFocusLost
+        if(txt_user.getText().equals("")){
+            txt_user.setText("Digite seu nome de usuário...");
+        }
+    }//GEN-LAST:event_txt_userFocusLost
+
+    private void txt_senhaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_senhaFocusGained
+        if(txt_user.getText().equals("Digite seu nome...")){
+            txt_user.setText("");
+        }
+    }//GEN-LAST:event_txt_senhaFocusGained
+
+    private void txt_senhaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_senhaFocusLost
+        if(txt_user.getText().equals("Digite seu nome...")){
+            txt_user.setText("");
+        }
+    }//GEN-LAST:event_txt_senhaFocusLost
+
+    private void txt_nomeFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_nomeFocusGained
+        if(txt_user.getText().equals("Digite seu nome...")){
+            txt_user.setText("");
+        }
+    }//GEN-LAST:event_txt_nomeFocusGained
+
+    private void txt_nomeFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_nomeFocusLost
+        if(txt_user.getText().equals("Digite seu nome...")){
+            txt_user.setText("");
+        }
+    }//GEN-LAST:event_txt_nomeFocusLost
+
+    private void txt_emailFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_emailFocusGained
+        if(txt_user.getText().equals("Digite seu nome...")){
+            txt_user.setText("");
+        }
+    }//GEN-LAST:event_txt_emailFocusGained
+
+    private void txt_emailFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_emailFocusLost
+        if(txt_user.getText().equals("Digite seu nome...")){
+            txt_user.setText("");
+        }
+    }//GEN-LAST:event_txt_emailFocusLost
+
+    private void txt_cpfFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_cpfFocusGained
+        if(txt_user.getText().equals("Digite seu nome...")){
+            txt_user.setText("");
+        }
+    }//GEN-LAST:event_txt_cpfFocusGained
+
+    private void txt_cpfFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_cpfFocusLost
+        if(txt_user.getText().equals("Digite seu nome...")){
+            txt_user.setText("");
+        }
+    }//GEN-LAST:event_txt_cpfFocusLost
+
+    private void txt_diaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_diaFocusGained
+        if(txt_user.getText().equals("Digite seu nome...")){
+            txt_user.setText("");
+        }
+    }//GEN-LAST:event_txt_diaFocusGained
+
+    private void txt_diaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_diaFocusLost
+        if(txt_user.getText().equals("Digite seu nome...")){
+            txt_user.setText("");
+        }
+    }//GEN-LAST:event_txt_diaFocusLost
+
+    private void txt_mesFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_mesFocusGained
+        if(txt_user.getText().equals("Digite seu nome...")){
+            txt_user.setText("");
+        }
+    }//GEN-LAST:event_txt_mesFocusGained
+
+    private void txt_mesFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_mesFocusLost
+        if(txt_user.getText().equals("Digite seu nome...")){
+            txt_user.setText("");
+        }
+    }//GEN-LAST:event_txt_mesFocusLost
+
+    private void txt_anoFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_anoFocusGained
+        if(txt_user.getText().equals("Digite seu nome...")){
+            txt_user.setText("");
+        }
+    }//GEN-LAST:event_txt_anoFocusGained
+
+    private void txt_anoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_anoFocusLost
+        if(txt_user.getText().equals("Digite seu nome...")){
+            txt_user.setText("");
+        }
+    }//GEN-LAST:event_txt_anoFocusLost
+
+    private void rd_outroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rd_outroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rd_outroActionPerformed
+
+    private void rd_pacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rd_pacienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rd_pacienteActionPerformed
+
+    private void btn_entrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_entrarMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_entrarMouseClicked
+
+    private void btn_entrar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_entrar1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_entrar1MouseClicked
+
+    private void btn_entrar2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_entrar2MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_entrar2MouseClicked
+
+    private void txt_crmFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_crmFocusGained
+        if(txt_user.getText().equals("Digite seu nome...")){
+            txt_user.setText("");
+        }
+    }//GEN-LAST:event_txt_crmFocusGained
+
+    private void txt_crmFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_crmFocusLost
+        if(txt_user.getText().equals("Digite seu nome...")){
+            txt_user.setText("");
+        }
+    }//GEN-LAST:event_txt_crmFocusLost
+
+    private void btn_0800MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_0800MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_0800MouseClicked
+
+    private void btn_0830MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_0830MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_0830MouseClicked
+
+    private void btn_0900MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_0900MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_0900MouseClicked
+
+    private void btn_0930MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_0930MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_0930MouseClicked
+
+    private void btn_1000MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_1000MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_1000MouseClicked
+
+    private void btn_1030MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_1030MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_1030MouseClicked
+
+    private void btn_1100MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_1100MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_1100MouseClicked
+
+    private void btn_1130MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_1130MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_1130MouseClicked
+
+    private void btn_1400MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_1400MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_1400MouseClicked
+
+    private void btn_1430MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_1430MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_1430MouseClicked
+
+    private void btn_1500MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_1500MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_1500MouseClicked
+
+    private void btn_1530MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_1530MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_1530MouseClicked
+
+    private void btn_1600MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_1600MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_1600MouseClicked
+
+    private void btn_1630MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_1630MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_1630MouseClicked
+
+    private void btn_1700MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_1700MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_1700MouseClicked
+
+    private void btn_1730MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_1730MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_1730MouseClicked
+
+    private void btn_1730ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_1730ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_1730ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup btg_sexo;
+    private javax.swing.ButtonGroup btg_tipo;
+    private javax.swing.JButton btn_0800;
+    private javax.swing.JButton btn_0830;
+    private javax.swing.JButton btn_0900;
+    private javax.swing.JButton btn_0930;
+    private javax.swing.JButton btn_1000;
+    private javax.swing.JButton btn_1030;
+    private javax.swing.JButton btn_1100;
+    private javax.swing.JButton btn_1130;
+    private javax.swing.JButton btn_1400;
+    private javax.swing.JButton btn_1430;
+    private javax.swing.JButton btn_1500;
+    private javax.swing.JButton btn_1530;
+    private javax.swing.JButton btn_1600;
+    private javax.swing.JButton btn_1630;
+    private javax.swing.JButton btn_1700;
+    private javax.swing.JButton btn_1730;
+    private javax.swing.JButton btn_entrar;
+    private javax.swing.JButton btn_entrar1;
+    private javax.swing.JButton btn_entrar2;
+    private javax.swing.JComboBox<String> cb_especialidade;
+    private extras.PicturePanel img_logo;
+    private extras.PicturePanel img_logo2;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JPanel pn_medico;
+    private javax.swing.JRadioButton rd_adm;
+    private javax.swing.JRadioButton rd_fem;
+    private javax.swing.JRadioButton rd_masc;
+    private javax.swing.JRadioButton rd_medico;
+    private javax.swing.JRadioButton rd_outro;
+    private javax.swing.JRadioButton rd_paciente;
+    private javax.swing.JTextField txt_ano;
+    private javax.swing.JTextField txt_cpf;
+    private javax.swing.JTextField txt_crm;
+    private javax.swing.JTextField txt_dia;
+    private javax.swing.JTextField txt_email;
+    private javax.swing.JTextField txt_mes;
+    private javax.swing.JTextField txt_nome;
+    private javax.swing.JTextField txt_senha;
+    private javax.swing.JTextField txt_user;
     // End of variables declaration//GEN-END:variables
 }

@@ -1,6 +1,5 @@
 package clinicamedica;
 
-import extras.AudioWav;
 import java.awt.Cursor;
 import java.io.File;
 import java.io.FileInputStream;
@@ -86,7 +85,7 @@ public class TelaLogin extends javax.swing.JPanel {
         txt_user.setBackground(new java.awt.Color(255, 255, 255));
         txt_user.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
         txt_user.setForeground(new java.awt.Color(102, 102, 102));
-        txt_user.setText("Digite seu nome de usuário...");
+        txt_user.setText("Digite seu email ou nome de usuário...");
         txt_user.setToolTipText("");
         txt_user.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -94,6 +93,11 @@ public class TelaLogin extends javax.swing.JPanel {
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
                 txt_userFocusLost(evt);
+            }
+        });
+        txt_user.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_userActionPerformed(evt);
             }
         });
 
@@ -188,14 +192,14 @@ public class TelaLogin extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void txt_userFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_userFocusGained
-        if(txt_user.getText().equals("Digite seu nome de usuário...")){
+        if(txt_user.getText().equals("Digite seu email ou nome de usuário...")){
 		txt_user.setText("");
 	}
     }//GEN-LAST:event_txt_userFocusGained
 
     private void txt_userFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_userFocusLost
         if(txt_user.getText().equals("")){
-		txt_user.setText("Digite seu nome de usuário...");
+		txt_user.setText("Digite seu email ou nome de usuário...");
 	}
     }//GEN-LAST:event_txt_userFocusLost
 
@@ -222,6 +226,10 @@ public class TelaLogin extends javax.swing.JPanel {
         janela.add(Janela.tc);
         janela.pack();
     }//GEN-LAST:event_txt_criarContaMouseClicked
+
+    private void txt_userActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_userActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_userActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

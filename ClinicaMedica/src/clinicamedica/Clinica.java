@@ -1,13 +1,21 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package clinicamedica;
 
-/**
- *
- * @author Administrador
- */
-public class Clinica {
+import java.io.Serializable;
+import java.util.ArrayList;
+
+public class Clinica implements Serializable {
+    private ArrayList<Administrador> administradores = new ArrayList<>();
+    private ArrayList<Medico> medicos = new ArrayList<>();
+    private ArrayList<Paciente> pacientes = new ArrayList<>();
+    private ArrayList<Consulta> consultas = new ArrayList<>();
+    private ArrayList<Agenda> agendas = new ArrayList<>();
+
+    public Clinica() {
+        if (administradores.isEmpty() && medicos.isEmpty()) {
+            
+        }
+    
+    }
+    
     
 }
