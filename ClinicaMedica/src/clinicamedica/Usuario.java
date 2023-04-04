@@ -9,18 +9,15 @@ import javax.swing.JOptionPane;
 public abstract class Usuario implements Serializable {
     SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
     
-    private String nome, usuario, cpf, senha, email;
+    private String nome, cpf, email;
     private char sexo;
     private Date dtNasc;
-    private boolean isAdm = false;
     
     protected Usuario(){}
-    protected Usuario(String nome, String usuario, String cpf, char sexo, String dtNasc, String senha, String email) {
+    protected Usuario(String nome, String cpf, char sexo, String dtNasc, String email) {
         this.nome = nome;
-        this.usuario = usuario;
         this.cpf = cpf;
         this.sexo = sexo;
-        this.senha = senha;
         this.email = email;
         
         try {
@@ -40,18 +37,6 @@ public abstract class Usuario implements Serializable {
     public void setNome(String nome) {
         this.nome = nome;
     }
-    
-    public void setAdm(boolean adm) {
-        this.isAdm = adm;
-    }
-
-    public String getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
-    }
 
     public String getCpf() {
         return cpf;
@@ -59,14 +44,6 @@ public abstract class Usuario implements Serializable {
 
     public void setCpf(String cpf) {
         this.cpf = cpf;
-    }
-
-    public String getSenha() {
-        return senha;
-    }
-
-    public void setSenha(String senha) {
-        this.senha = senha;
     }
 
     public char getSexo() {

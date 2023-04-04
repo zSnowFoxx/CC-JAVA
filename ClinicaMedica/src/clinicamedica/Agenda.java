@@ -1,19 +1,22 @@
 package clinicamedica;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
+public class Agenda {
+    private boolean[][] calendario = new boolean[5][16];
 
-public abstract class Agenda {
-    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-    private Date dia = new Date();
-    private int crm;
-
-    public Agenda(int crm) {
-        this.crm = crm;
+    public Agenda() {
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 16; j++) {
+                calendario[i][j] = false;
+            }
+        }
     }
     
-    public void addHorarioLivre(String inicio, String fim) {
-        
+    public void addHorarioLivre(int dia, int horario) {
+        calendario[dia][horario] = true;
+    }
+    
+    public void addHorarioOcupado(int dia, int horario) {
+        calendario[dia][horario] = false;
     }
     
 }
